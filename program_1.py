@@ -6,10 +6,12 @@
 # Add your logic starting on line 11
 
 def initials_generator(personsName):
-
+ 
+    name_parts = personsName.split()
     personsInitials = ""
-    #    Add your logic here
+    personsInitials = ' '.join([name[0].upper() + '.' for name in name_parts])
 
+    
     return personsInitials.strip()
 
 personsName = input('Enter the users first, middle, and last name')
