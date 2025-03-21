@@ -8,9 +8,9 @@
 # Start your changes on line 13
 
 def word_separator(sentence):
-
     new_sentence = ""
     #    Add your logic here
+    new_sentence = re.sub(r'([a-z])([A-Z])', r'\1 \2', sentence).capitalize()
 
     return new_sentence.strip()
 
@@ -21,3 +21,4 @@ sentence = "StopAndSmellTheRoses"
 new_sentence = word_separator(sentence)
 
 print(new_sentence)
+
